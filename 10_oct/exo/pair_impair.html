@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercice nombres pairs</title>
+  </head>
+  <body>
+    <script>
+      /* Ecrire un algorithme pour savoir si les nombres d’un tableau sont pair ou non. */
+
+      // Entrée = [65, 2, 87, 30, 16, 5, 14, 67, 56, 8]
+
+      // Si le resultat de la division est égal à 1 a
+      // ALORS, le nombre est pair
+      // SINON, il est impair
+
+      let number = [65, 2, 87, 30, 16, 5, 14, 67, 56, 8];
+
+      for (let i = 0; i < number.length; i++) {
+        if (number[i] % 2 == 0) {
+          number[i] = number[i] + ' ' + ': est un nombre pair';
+        } else {
+          number[i] = number[i] + ' ' + ': est un nombre impair';
+        }
+      }
+      console.log(number);
+
+      //Sortie = [65 != pair, 2 = pair, ...]
+    </script>
+  </body>
+</html>

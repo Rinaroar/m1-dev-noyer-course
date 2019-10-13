@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EXO 2 : Les boucles</title>
+</head>
+<body>
+
+
+    <h1> Exo 2 : Les boucles </h1>
+
+    <script>
+
+        // Déclaration
+        let hardSkills = ['HTML', 'CSS'];
+        let softSkills = ['Yoga', 'Tattoo'];
+
+        let skills = [...hardSkills,...softSkills];
+
+
+        // Boucles
+        for ( let i = 0; i < skills.length; i++){
+            console.log(skills[i]);
+        }
+
+       for (let item of skills){
+             console.log(item);
+        }
+
+        skills.map (item => {
+            console.log(item);
+        })
+
+
+
+
+    </script>
+
+</body>
+</html>

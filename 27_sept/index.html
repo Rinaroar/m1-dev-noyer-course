@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exo 1 : déclaration de variables</title>
+  </head>
+  <body>
+    <h1>Exo 1 : déclaration de valriables</h1>
+    <script>
+
+      // ES5
+      var myVar = "Marina";
+
+      // ES6
+      let firstName = 'Luxin';
+      let myAge = 22;
+      const birthDate = 1997;
+
+
+      /* par condensé
+      let firstName = 'Marina', myAge = 22; */
+
+
+
+      /* String templating */
+
+          //ES5
+          let sayHello = "Bonjour" + myVar + ' ' + firstName + 'vous avez' + myAge + ' ans';
+
+
+          //ES6
+          let sayCiao = `
+              <h2>
+              Bonjour ${myVar} ${firstName} vous avez ${myAge} ans.
+              </h2>
+          `;
+
+
+      /* Function */
+
+          // ES5
+          function myFunction(){
+              console.log(true)
+          };
+
+          var theFunction = function(){
+              console.error(false)
+          };
+
+
+          // ES6
+          const  hello = () => {
+              return true
+          };
+
+          const ciao = () => 'ciao'; // renvoie return implicite, en condensé
+
+
+          const bye = name => Bye ${name}``;  // pareil pour les paramètres
+          bye ('Marie');
+
+
+          const salut =(name = Pierre) => {
+              //console.log(`Salut ${name}`)
+          };
+          salut ()
+          salut ('Robert');
+
+
+          var test = function(name){
+              name === undefined ? name ='jean' : null;
+
+              console.log(name);
+          };
+          test()
+
+
+          const userSkills = (user, ...skills) => {
+              console.log({ user, skills }) // rest paramater --> fait un tableau (?)
+          }
+          userSkills('Marina', 'HTML', 'CSS');
+    </script>
+  </body>
+</html>

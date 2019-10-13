@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exo3</title>
+  </head>
+  <body>
+    <h1>Exo 3 : TP</h1>
+
+    <button>Ajouter une note</button>
+    <button>Calculer la moyenne</button>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        //attendre que le DOM soit chargé avant de lancer le script
+
+        /* Déclaration
+         */
+
+        let notes = [];
+        let addNoteBtn = document.querySelector('button:first-child');
+        let moyenneBtn = document.querySelector('button:last-of-type');
+
+        //
+
+        /*
+        Functions
+         */
+
+        const addNote = () => {
+          notes.push(+prompt('Ajouter une note')); //pousse les notes dans le tableau
+          console.log(notes);
+        }; // + en ES6 comme le parse.int et/ou le parse.float
+
+        const getAmount = () => {
+          let total = 0;
+
+          for (let item of notes) {
+            total += item;
+          }
+          console.log(total / notes.length);
+        };
+
+        /*
+        Start UI
+         */
+
+        addNoteBtn.addEventListener('click', () => addNote());
+        moyenneBtn.addEventListener('click', () => getAmount());
+      });
+    </script>
+  </body>
+</html>
