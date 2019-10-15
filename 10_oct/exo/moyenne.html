@@ -12,22 +12,60 @@
 
       //Entrée = [65, 2, 87, 30, 16, 5, 14, 67, 56, 8]
 
-      let number = [65, 2, 87, 30, 16, 5, 14, 67, 56, 8];
+      const number = [65, 2, 87, 30, 16, 5, 14, 67, 56, 8];
 
-      let resultMid = () => {
-        let total = 0;
-        for (let item of number) {
-          total += item;
-        }
-      };
-      console.log(total / number.length);
+      const resultMid = n => {
+        let totalMoyenne = 0;
 
-      let resultMin = () => {
-        let minimum = 0;
-        for (let item of number) {
-          minimum = // le nombre plus petit du tableau
+        for (let item of n) {
+          totalMoyenne = totalMoyenne + item; //total += item c'est la même chose
         }
+        return totalMoyenne / n.length;
       };
+
+      // Peut calculer la moyenne autrement :
+
+      /* const sum = number.reducer(
+        (accumulator, currentValue) => accumulator + currentValue
+      );
+      console.log(sum / number.length); */
+
+      const resultMin = n => {
+        let totalMin = null;
+
+        for (let item of n) {
+          if (totalMin === null) {
+            totalMin = item; // le nombre plus petit du tableau
+          }
+
+          if (totalMin > item) {
+            totalMin = item;
+          }
+        }
+        return totalMin;
+      };
+
+      const resultMax = n => {
+        let totalMax = null;
+
+        for (let item of n) {
+          if (totalMax === null) {
+            totalMax = item; // le nombre plus petit du tableau
+          }
+
+          if (totalMax < item) {
+            totalMax = item;
+          }
+        }
+        return totalMax;
+      };
+
+      const finalResult = `Moyenne : ${resultMid(number)},
+      Plus petit : ${resultMin(number)},
+      Plus grand : ${resultMax(number)}`;
+
+      console.log(finalResult);
+
       //Sortie = Moyenne 35 - Plus petit = 2, Plus grand = 87
     </script>
   </body>
