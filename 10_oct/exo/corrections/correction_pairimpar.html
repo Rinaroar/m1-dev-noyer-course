@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    /* Declaration */
+    let result = '';
+    let data = [65, 2, 87, 30, 16, 5, 14, 67, 56, 8];
+
+      /* Use the For Of loop */
+      for (item of data) {
+        // If we can divide item value by 2
+        item % 2 === 0
+          // += c'est la concaténation de la valeur de la varibale avec le nouveau resultat
+          ? (result += `${item} = pair`) // its peer
+          : (result += `${item} != pair`); // its odd
+      }
+
+      // Display result
+      console.log(result);
+
+  </script>
+</body>
+</html>

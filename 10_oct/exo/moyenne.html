@@ -9,7 +9,6 @@
   <body>
     <script>
       /** Ecrire un algorithme qui permet de calculer la moyenne des chiffres d’un tableau. */
-
       //Entrée = [65, 2, 87, 30, 16, 5, 14, 67, 56, 8]
 
       const number = [65, 2, 87, 30, 16, 5, 14, 67, 56, 8];
@@ -24,11 +23,12 @@
       };
 
       // Peut calculer la moyenne autrement :
-
-      /* const sum = number.reducer(
+      /*
+      const sum = number.reducer(
         (accumulator, currentValue) => accumulator + currentValue
       );
-      console.log(sum / number.length); */
+      console.log(sum / number.length);
+      */
 
       const resultMin = n => {
         let totalMin = null;
@@ -67,6 +67,38 @@
       console.log(finalResult);
 
       //Sortie = Moyenne 35 - Plus petit = 2, Plus grand = 87
+
+      //CORRECTION JULIEN
+      /* Declarations */
+      let data = [65, 2, 87, 30, 16, 5, 14, 67, 56, 8];
+      let total = 0;
+      let min;
+      let max;
+
+      // Use For Each loop with iteration index
+      data.forEach((item, i) => {
+        // Add item value to total
+        total += item;
+
+        // Set min and max values at the first loop
+        if (i === 0) {
+          min === item;
+          max = item;
+        }
+        // If current item value is smaller than min value
+        else if (item < min) {
+          min = item;
+        }
+        // If currrent item value is bigger than max value
+        else if (item > max) {
+          max = item;
+        }
+      });
+
+      // Display result: divide total value by data length value
+      console.log(`
+    Moyenne : ${total / data.length} - Min. : ${min} - Max. : ${max}
+`);
     </script>
   </body>
 </html>
